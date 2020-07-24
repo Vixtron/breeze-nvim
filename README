@@ -1,0 +1,8 @@
+KDE DOTFILES
+DEPENDENCIES:
+
+- vim-plug
+- powerline-fonts
+
+symlink init.vim -> $HOME/.config/nvim/init.vim
+run :PlugInstall after launching nvim for the first time
