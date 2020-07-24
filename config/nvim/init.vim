@@ -1,1 +1,0 @@
-/home/vix/.vimrc
