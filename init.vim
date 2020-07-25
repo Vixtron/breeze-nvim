@@ -6,7 +6,6 @@
 " You are allowed to copy, edit and use it in your repo
 " ==========================================================
 
-
 syntax enable
 
 set encoding=UTF-8
@@ -81,8 +80,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeStatusline = "%{exists('b:NERDTree')?b:NERDTree.root.path.str():''}"
 " Disable nerdtree expandable icons
-let g:NERDTreeDirArrowExpandable = ' '
-let g:NERDTreeDirArrowCollapsible = ' '
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 function NERDTreeHighlightFile(extension, fg, guifg)
     exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermfg='. a:fg .' guifg='. a:guifg

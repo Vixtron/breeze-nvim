@@ -18,12 +18,6 @@ export CARGO_HOME="$HOME/.local/share/cargo"
 #PS1='[\u@\h \W]\$ '
 PS1='\u@\h:\w> '
 
-function alert() {
-    if [ $? = 0 ]; then icon=terminal; else icon=error; fi
-    last_cmd="$(history | tail -n1 | sed 's/^\s*[0-9]*\s*//' | sed 's/;\s*alert\s*$//')"
-    notify-send -i $icon "$last_cmd"
-}
-
 # Command aliases
 alias \
     vim="nvim" \
