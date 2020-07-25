@@ -10,7 +10,7 @@
 
 ### This is a full nvim IDE integration with `vim-plug` based on [breezy](https://github.com/fneu/breezy)
 
-This is my fun little project, I wanted nvim a theme for kde-plasma so I wanted share my current setup.
+This is my fun little project, I wanted an nvim theme for kde-plasma so I wanted share my current setup.
 Currently it's depending on:
 - vim-plug (AUR)
 - nerd-fonts-inconsolata (AUR)
