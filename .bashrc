@@ -29,7 +29,6 @@ alias \
     vim="nvim" \
     ls="ls --color=auto --group-directories-first" \
     l="ls -al --color=auto --group-directories-first" \
-    grep="grep --color-auto" \
     cp="cp -iv" \
     mv="mv -iv" \
     rm="rm -vI" \

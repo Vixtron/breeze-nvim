@@ -17,7 +17,7 @@ hi Folded        guibg=#31363b guifg=#7a7c7d gui=NONE
 hi MatchParen    guibg=#8e44ad guifg=#cfcfc2 gui=NONE
 hi signColumn    guibg=#31363b guifg=#7a7c7d gui=NONE
 
-hi Comment        guibg=NONE    guifg=#7a7c7d gui=NONE
+hi Comment        guibg=NONE    guifg=#7a7c7d gui=italic
 hi Conceal        guibg=NONE    guifg=#cfcfc2 gui=NONE
 hi Constant       guibg=NONE    guifg=#f67400 gui=NONE
 hi Boolean        guibg=NONE    guifg=#27aeae gui=NONE
@@ -48,7 +48,7 @@ hi MoreMsg       guibg=NONE    guifg=#fdbc4b gui=bold
 hi Question      guibg=NONE    guifg=#fdbc4b gui=bold
 hi WarningMsg    guibg=NONE    guifg=#ffffff gui=NONE
 
-hi TabLine       guibg=#31363b guifg=#7a7c7d gui=NONE
+hi TabLine       guibg=#31363b guifg=#7a7c7d gui=reverse
 hi TabLineFill   guibg=#31363b guifg=NONE    gui=NONE
 hi TabLineSel    guibg=#2d5c76 guifg=NONE    gui=NONE
 
@@ -61,7 +61,7 @@ hi helpLeadBlank guibg=NONE    guifg=NONE    gui=NONE
 hi helpNormal    guibg=NONE    guifg=NONE    gui=NONE
 
 hi StatusLine    guibg=#2d5c76 guifg=NONE    gui=NONE
-hi StatusLineNC  guibg=#31363b guifg=#7a7c7d gui=NONE
+hi StatusLineNC  guibg=#2d5c76 guifg=#7a7c7d gui=NONE
 
 hi Visual        guibg=#2d5c76 guifg=NONE    gui=NONE
 hi VisualNOS     guibg=NONE    guifg=NONE    gui=underline
