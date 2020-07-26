@@ -14,7 +14,7 @@ set laststatus=2
 set clipboard=unnamedplus
 
 " Copy yanked lines to xclip
-map <leader>xyy :!xclip -f sel clip<CR>
+map <leader>xc :!xclip -f sel clip<CR>
 
 " Line numbers, disable swap files, custom indentation, mouse input support
 set number
