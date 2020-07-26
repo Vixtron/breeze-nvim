@@ -38,6 +38,14 @@ set termguicolors
 " Set dark for black background
 set background=light
 
+" Installs vim-plug for first time use
+if ! filereadable(system('echo -n "$HOME/.config/nvim/autoload/plug.vim"'))
+    echo "Downloading junegunn/vim-plug to manage plugins"
+    silent !mkdir -p $HOME/.config/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $HOME/.config/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+
 " Load vim-plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
