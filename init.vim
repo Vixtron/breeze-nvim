@@ -70,8 +70,9 @@ let g:indentLine_char = '¦'
 " Multiple characters for indentation (disabled)
 " let g:indentLine_char_list = ['|','¦', '┆', '┊']
 
-" Toggle plugins
+" Plugin keybinds plugins
 map <C-n> :NERDTreeToggle<CR>
+map <C-f> :NerdTreeFind<CR>
 map <C-d> :GitGutterToggle<CR>
 
 " Nerdtree start on empty window with no file in the editor
@@ -86,6 +87,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Removes clutter '?' for help
 let NERDTreeMinimalUI = 1
 let NERDTreeAutoDeleteBuffer = 1
+" Default nerdtree statusline
 let NERDTreeStatusline = "%{exists('b:NERDTree')?b:NERDTree.root.path.str():''}"
 " Disable nerdtree expandable icons
 let g:NERDTreeDirArrowExpandable = ''
@@ -138,7 +140,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Changes how your tabline shows the file path/name options:
 " 'default', 'unique_tail', 'unique_tail_improved', 'short_path', 'foo'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#nerdtree_status = 0
 " Disables annoying trailing tab in the powerline for whitespaces
 let g:airline#extensions#whitespace#enabled = 0
 
