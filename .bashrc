@@ -27,3 +27,19 @@ alias \
     mv="mv -iv" \
     rm="rm -vI" \
     mkdir="mkdir -pv"
+
+# Purge pacman package cache directory
+PKG_DIR="/var/cache/pacman/pkg"
+
+pacman_pkg(){
+    if [ -z "$(ls -A $PKG_DIR)" ]; then
+        echo "Directory empty, nothing to do..."
+    else
+        echo "Deleting pacman package cache..." ; ls -A $PKG_DIR ; sudo rm -rf $PKG_DIR/*
+    fi
+}
+
+# Pacman aliases
+alias \
+    pacro="sudo pacman -Rns $(pacman -Qttdq)" \
+    pacc="pacman_pkg"
