@@ -14,7 +14,7 @@ set laststatus=2
 set clipboard=unnamedplus
 
 " Copy yanked lines to xclip
-map <leader>xc :!xclip -f sel clip<CR>
+map <leader>xl :!xclip -f sel clip<CR>
 
 " Line numbers, disable swap files, custom indentation, mouse input support
 set number
@@ -70,7 +70,7 @@ let g:indentLine_char = '¦'
 " Multiple characters for indentation (disabled)
 " let g:indentLine_char_list = ['|','¦', '┆', '┊']
 
-" Plugin keybinds plugins
+" Plugin keybinds
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :NerdTreeFind<CR>
 map <C-d> :GitGutterToggle<CR>
