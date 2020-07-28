@@ -14,8 +14,8 @@ set guifont="Inconsolata Nerd Font 11"
 set laststatus=2
 set clipboard=unnamedplus
 
-" Format code keybind Alt + F
-map <M-f> gg=G<C-o><C-o>
+" Format code keybind Alt + Ctrl + F
+map <A-C-f> gg=G<C-o><C-o>
 
 " Line numbers, disable swap files, custom indentation, mouse input support
 set number
@@ -27,9 +27,9 @@ set mouse=a
 " Indentation
 set smarttab
 set autoindent
-set tabstop=6
+set tabstop=4
 set softtabstop=4
-set shiftwidth=6
+set shiftwidth=4
 set expandtab
 set ignorecase
 
@@ -40,10 +40,10 @@ set background=light
 
 " Installs vim-plug for first time use
 if ! filereadable(system('echo -n "$HOME/.config/nvim/autoload/plug.vim"'))
-      echo "Downloading junegunn/vim-plug to manage plugins"
-      silent !mkdir -p $HOME/.config/nvim/autoload/
-      silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $HOME/.config/nvim/autoload/plug.vim
-      autocmd VimEnter * PlugInstall
+    echo "Downloading junegunn/vim-plug to manage plugins"
+    silent !mkdir -p $HOME/.config/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $HOME/.config/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
 " Load vim-plugins
@@ -94,29 +94,29 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 function NERDTreeHighlightFile(extension, fg, guifg)
-      exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermfg='. a:fg .' guifg='. a:guifg
-      exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+    exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermfg='. a:fg .' guifg='. a:guifg
+    exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
 augroup nerdtree
-      call NERDTreeHighlightFile('config', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('conf', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('json', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('properties', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('rc', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('ignore', 'none', '#fdbc4b')
-      call NERDTreeHighlightFile('yml', 'none', '#783228')
-      call NERDTreeHighlightFile('yaml', 'none', '#783228')
-      call NERDTreeHighlightFile('md', 'none', '#8e44ad')
-      call NERDTreeHighlightFile('html', 'none', '#f67400')
-      call NERDTreeHighlightFile('hbs', 'none', '#ff5f5f')
-      call NERDTreeHighlightFile('css', 'none', '#3daee9')
-      call NERDTreeHighlightFile('js', 'none', '#b65619')
-      call NERDTreeHighlightFile('php', 'none', '#1b668f')
-      call NERDTreeHighlightFile('log', 'none', '#585858')
-      call NERDTreeHighlightFile('sh', 'none', '#1d99f3')
-      call NERDTreeHighlightFile('xml', 'none', '#1cdc9a')
-      call NERDTreeHighlightFile('java', 'none', '#9b59b6')
+    call NERDTreeHighlightFile('config', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('conf', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('json', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('properties', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('rc', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('ignore', 'none', '#fdbc4b')
+    call NERDTreeHighlightFile('yml', 'none', '#783228')
+    call NERDTreeHighlightFile('yaml', 'none', '#783228')
+    call NERDTreeHighlightFile('md', 'none', '#8e44ad')
+    call NERDTreeHighlightFile('html', 'none', '#f67400')
+    call NERDTreeHighlightFile('hbs', 'none', '#ff5f5f')
+    call NERDTreeHighlightFile('css', 'none', '#3daee9')
+    call NERDTreeHighlightFile('js', 'none', '#b65619')
+    call NERDTreeHighlightFile('php', 'none', '#1b668f')
+    call NERDTreeHighlightFile('log', 'none', '#585858')
+    call NERDTreeHighlightFile('sh', 'none', '#1d99f3')
+    call NERDTreeHighlightFile('xml', 'none', '#1cdc9a')
+    call NERDTreeHighlightFile('java', 'none', '#9b59b6')
 augroup END
 
 " Define colorscheme
